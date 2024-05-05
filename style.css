@@ -1,0 +1,560 @@
+body, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  letter-spacing: 1.92px;
+}
+body, html {
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+.y-hidden {
+  overflow-y: hidden;
+}
+::-webkit-scrollbar {
+  width: 9px;
+  background-color: rgba(0,0,0,0.4);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,.7);
+  border-radius: 5px;
+}
+.loader {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(120deg,#e9e9e9 0%, #1f6dcd 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition-duration: .3s;
+  transition-delay: .3s;
+}
+.loader-image {
+  width: auto;
+  height: auto;
+  transition-duration: .3s;
+}
+.loader-image--hidden,
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+section {
+  min-height: 100vh;
+  max-width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -2;
+  position: relative;
+  background-color: rgb(3, 23, 41);
+}
+/* вставка фонов */
+.home--sec1 {
+  background-image: url(img/ФОНЫ/Фон\ 1.svg);
+  background-color: rgb(9, 76, 134);
+}
+.introduction--sec2 {
+  background-image: url(img/ФОНЫ/Фон\ 2.svg);
+}
+.paper--sec3 {
+  background-image: url(img/ФОНЫ/Фон\ 3.svg);
+}
+.metal--sec4 {
+  background-image: url(img/ФОНЫ/Фон\ 4.svg);
+}
+.tissues--sec5 {
+  background-image: url(img/ФОНЫ/Фон\ 5.svg);
+}
+.mechanics--sec6 {
+  background-image: url(img/ФОНЫ/Фон\ 6.svg);
+}
+.plastic--sec7 {
+  background-image: url(img/ФОНЫ/Фон\ 7.svg);
+  background-position-y: bottom;
+  background-color: rgba(4, 28, 48, .98);
+}
+.glass--sec8 {
+  background-image: url(img/ФОНЫ/Фон\ 8.svg);
+}
+.conclusion--sec9 {
+  background-image: url(img/ФОНЫ/Фон\ 9.svg);
+}
+.paper,
+.metal,
+.tissues,
+.mechanics,
+.plastic {
+  padding-bottom: 60px;
+}
+.container {
+  max-width: 1200px;
+  border: 1px solid transparent;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 0 40px;
+}
+.home__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home__titles {
+  margin-bottom: 20%;
+}
+.home__title {
+  text-transform: uppercase;
+  font-size: 73px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
+}
+.home__title--transparent {
+  color: transparent;
+  -webkit-text-stroke: 3px #fff;
+}
+.home__title--fill {
+  color: #fff;
+  text-shadow: 0 0 3.5px #fff;
+  margin-top: -10px;
+}
+.introduction__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.introduction__p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 0;
+}
+.introduction__p1 {
+  margin-bottom: 54px;
+}
+.introduction__p span {
+  color: rgba(31, 154, 255, 0.98);
+  font-size: 110%;
+}
+.paper__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 70px;
+}
+.text-normal {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.title-for-pics {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.subtitle-for-pics {
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  margin-bottom: 0;
+}
+.images-wrap {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.image {
+  width: 98%;
+  height: 98%;
+}
+.metal__container,
+.tissues__container,
+.mechanics__container,
+.plastic__container,
+.conclusion__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 70px;
+}
+.plastic__container,
+.mechanics__container {
+  row-gap: 50px;
+}
+.glass__images {
+  height: 90vh;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-left: -40px;
+}
+.conclusion__container {
+  justify-content: center;
+  row-gap: 0;
+}
+.conclusion__p {
+  font-size: 40px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10%;
+}
+@media screen and (max-width: 1400px) {
+  .conclusion__p {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  body .home--sec1 {
+    background-image: url(img/ФОНЫ/1200/Фон\ 1\ 1200.svg);
+  }
+  .home__titles {
+    margin-bottom: 22%;
+  }
+  .home__titles .home__title {
+    font-size: 60px;
+  }
+  .introduction__p {
+    font-size: 23px;
+  }
+  .introduction__p1 {
+    margin-bottom: 40px;
+  }
+  .conclusion__p {
+    font-size: 28px;
+    margin-bottom: 8%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .loader-image {
+    width: 280px;
+    height: 136px;
+  }
+  .home__titles .home__title {
+    font-size: 50px;
+  }
+  .home__titles {
+    margin-bottom: 26%;
+  }
+  .introduction__p {
+    font-size: 19px;
+    letter-spacing: 1.6px;
+  }
+  .introduction__p1 {
+    margin-bottom: 34px;
+  }
+  .paper__container,
+  .metal__container,
+  .tissues__container,
+  .plastic__container,
+  .conclusion__container {
+    row-gap: 60px;
+  }
+  .mechanics__container {
+    row-gap: 30px;
+  }
+  .text-normal {
+    font-size: 20px;
+  }
+  .plastic__container {
+    row-gap: 30px;
+  }
+  .glass__images {
+    margin-left: -20px;
+  }
+  .conclusion__p {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .loader-image {
+    width: 240px;
+    height: 130px;
+  }
+  .introduction,
+  .paper,
+  .metal,
+  .tissues,
+  .mechanics,
+  .plastic,
+  .glass,
+  .conclusion,
+  .introduction__container,
+  .paper__container,
+  .metal__container,
+  .tissues__container,
+  .mechanics__container,
+  .plastic__container,
+  .glass__container,
+  .conclusion__container {
+    min-height: auto;
+  }
+  .introduction,
+  .paper,
+  .metal,
+  .tissues,
+  .mechanics,
+  .plastic {
+    padding-top: 60px;
+  }
+  .glass {
+    padding-top: 24px;
+  }
+  .conclusion {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-position-y: 20%;
+  }
+  .conclusion__p {
+    padding-bottom: 0;
+  }
+  .home__container {
+    padding: 0px 20px;
+  }
+  .home__titles {
+    margin-bottom: 28%;
+  }
+  .home__titles .home__title {
+    font-size: 45px;
+  }
+  .home__title--transparent {
+    letter-spacing: 3px;
+    -webkit-text-stroke: 2px #fff;
+  }
+  .home__title--fill {
+    margin-top: -5px;
+    letter-spacing: 2.3px;
+  }
+  .introduction__container,
+  .conclusion__container {
+    padding: 0px 30px;
+  }
+  .introduction__p {
+    font-size: 17px;
+  }
+  .images-wrap {
+    height: auto;
+  }
+  .paper__container,
+  .metal__container,
+  .tissues__container,
+  .mechanics__container,
+  .plastic__container,
+  .conclusion__container,
+  .plastic__container {
+    row-gap: 50px;
+    padding: 0 30px;
+  }
+  .text-normal {
+    font-size: 18px;
+  }
+  .glass__images {
+    margin-left: -10px;
+  }
+  .conclusion__p {
+    font-size: 19px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .loader-image {
+    width: 220px;
+    height: 110px;
+  }
+  body .home--sec1 {
+    background-image: url(img/ФОНЫ/576/Фон\ 1\ 579.svg);
+  }
+  body .introduction--sec2 {
+    background-image: url(img/ФОНЫ/576/Фон\ 2\ 579.svg);
+  }
+  body .paper--sec3 {
+    background-image: url(img/ФОНЫ/576/Фон\ 3\ 579.svg);
+  }
+  body .metal--sec4 {
+    background-image: url(img/ФОНЫ/576/Фон\ 4\ 579.svg);
+  }
+  body .plastic--sec7 {
+    background-image: url(img/ФОНЫ/576/фон\ 7\ 579.svg);
+  }
+  .paper,
+  .introduction {
+    padding-top: 40px;
+  }
+  .metal,
+  .tissues,
+  .mechanics,
+  .plastic,
+  .glass {
+    padding-top: 10px;
+  }
+  .home__titles {
+    margin-bottom: 40%;
+  }
+  .home__titles .home__title {
+    font-size: 38px;
+  }
+  .home__title--transparent {
+    font-size: 39px;
+  }
+  .introduction__container {
+    padding: 0px 20px;
+  }
+  .introduction__p1 {
+    margin-bottom: 24px;
+  }
+  .text-normal {
+    font-size: 17px;
+  }
+  .title-for-pics {
+    margin-bottom: 5px;
+  }
+  .subtitle-for-pics {
+    -webkit-text-stroke: .5px #fff;
+  }
+  .glass__images {
+    margin-left: -7px;
+  }
+  .conclusion__p {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 510px) {
+  .home__titles {
+    margin-bottom: 65%;
+  }
+  .home__titles .home__title {
+    font-size: 35px;
+  }
+  .home__title--transparent {
+    font-size: 36px;
+    -webkit-text-stroke: 1px #fff;
+  }
+  .home__title--fill {
+    margin-top: 1px;
+    line-height: 37px;
+  }
+  .introduction__p1 {
+    margin-bottom: 10px;
+  }
+  .introduction__p {
+    font-size: 15px;
+  }
+  .text-normal {
+    font-size: 16px;
+  }
+  .paper__container,
+  .metal__container,
+  .tissues__container,
+  .mechanics__container,
+  .plastic__container {
+    row-gap: 40px;
+  }
+  .glass {
+    padding-top: 0px;
+  }
+  .conclusion {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .loader-image {
+    width: 200px;
+    height: 100px;
+  }
+  .text-normal {
+    font-size: 14px;
+  }
+  .paper,
+  .metal,
+  .tissues,
+  .mechanics,
+  .plastic,
+  .glass {
+    padding-bottom: 40px;
+  }
+  .conclusion {
+    padding-top: 15px;
+    padding-bottom: 30px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .loader-image {
+    width: 190px;
+    height: 94px;
+  }
+  .home__container {
+    padding: 0px 10px;
+  }
+  .home__titles {
+    margin-bottom: 54%;
+  }
+  .home__titles .home__title {
+    font-size: 30px;
+  }
+  .home__title--transparent {
+    font-size: 31px;
+  }
+  .introduction__p1 {
+    margin-bottom: 5px;
+  }
+  .introduction__p {
+    font-size: 14px;
+  }
+  .metal,
+  .tissues,
+  .mechanics,
+  .plastic,
+  .glass {
+    padding-top: 0px;
+  }
+  .conclusion {
+    padding-top: 7px;
+    padding-bottom: 30px;
+  }
+  .conclusion__p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .loader-image {
+    width: 170px;
+    height: 80px;
+  }
+  .home__titles {
+    margin-bottom: 76%;
+  }
+  .introduction__p1 {
+    margin-bottom: 0;
+  }
+  .introduction__p {
+    font-size: 13px;
+  }
+  .text-normal {
+    font-size: 12.5px;
+  }
+  .conclusion__container {
+    padding: 0px 20px;
+  }
+  .paper__container,
+  .metal__container,
+  .tissues__container,
+  .mechanics__container,
+  .plastic__container {
+    padding: 0 14px;
+  }
+  .conclusion {
+    padding-top: 1px;
+    padding-bottom: 30px;
+  }
+  .conclusion__p {
+    font-size: 13px;
+  }
+}
